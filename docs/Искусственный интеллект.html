@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="ru" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="ru" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="ru" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru" class="no-js">
+<!--<![endif]-->
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+    <title>Что такое искусственный интеллект? Применение машинного обучения.</title>
+    <meta name="description" content="В статье расскажем, что такое машинное обучение; как работает машинное обучение; виды машинного обучения, где применяется. Deep learning" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" id="title" content="Что такое искусственный интеллект? Применение машинного обучения." />
+    <meta property="og:description" id="description" content="В статье расскажем, что такое машинное обучение; как работает машинное обучение; виды машинного обучения, где применяется. Deep learning" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.nic.ru/ru/images/png/1.rc-preview.png" />
+    <meta name="msapplication-square70x70logo" content="/favicon_70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/favicon_150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/favicon_310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/favicon_310x310.png" />
+
+    <!--  TODO  canonical amp page -->
+    <link rel="amphtml" href="http://www.nic.ru/help/chto-takoe-iskusstvennyj-intellekt-primenenie-mashinnogo-obucheniya_11605.html?utm_source=google.com&utm_medium=organic&utm_campaign=google.com&utm_referrer=google.co/amp/">
+
+    <!-- custom script -->
+    <link rel="stylesheet" type="text/css" href="/help/html/front/default.977cc6b9.css" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" type="image/png" href="/favicon_192x192.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="/favicon_152x152.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/favicon_180x180.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="/favicon_167x167.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png" />    
+<!--    <script type="text/javascript" src="/help/html/js/lib/webchat-0.7.21.js"></script>-->
+    <script type="text/javascript" src="/help/html/js/lib/require-2.3.3.js"></script>
+    <script type="text/javascript" src="/help/html/js/lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/help/html/js/lib/modernizr-3.5.custom.js"></script>
+<!--    <script type="text/javascript" src="/help/html/js/app/chatbot.js?11022020"></script>-->
+    <script src='https://www.google.com/recaptcha/api.js' async></script>
+    <!-- грузим скрипты через script, потому что нужен Date.now в scr -->
+    <script>
+        window.__RC_WEB_NOTIFICATIONS_ENV__ = 'prod'
+
+        const SCRIPTS = [
+            '/scripts/external.bundle.js',
+            '/scripts/internal.bundle.js',
+            '/scripts/inform-notifications.bundle.js',
+            '/scripts/welcome-notification.bundle.js'
+        ]
+        SCRIPTS.forEach((src) => {
+            const script = document.createElement('script');
+            script.src = src + "?" + Date.now();
+            script.defer = true;
+
+            document.head.appendChild(script);
+        });
+    </script>
+
+    <!-- Google Analytic отключена в рамках RCWEB-10161 -->
+    <!-- Google Analytics -->
+    <!-- <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-54851853-1', 'auto', { 'legacyCookieDomain': 'nic.ru' });
+        ga(function (tracker) {
+            var clientId = tracker.get('clientId');
+            document.cookie = "_ga_cid=" + clientId + "; path=/";
+            ga('set', 'dimension3', clientId);
+        });
+
+        ga('set', 'dimension2', 'Guest');
+
+        ga('send', 'pageview');
+    </script> -->
+    <!-- End Google Analytics -->
+
+    <!-- Google Tag Manager отключен в рамках RCWEB-10161 -->
+    <!-- Google Tag Manager -->
+    <!-- <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K9MTVC');
+    </script> -->
+    <!-- End Google Tag Manager -->
+    <script>
+        (function (w, d, s, p) {
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = '//cdn.rutarget.ru/static/tag/tag.js';
+            f.parentNode.insertBefore(j, f);
+            w[p] = { rtgNoSync: false, rtgSyncFrame: true };
+        })(window, document, 'script', '_rtgParams');
+    </script>
+</head>
+
+<body>
+    <!-- NETROX SC CODE. Theme No. 5 -->
+    <div class="nsc_lw" style="display:none;">Netrox SC - <a href='https://www.netroxsc.ru'
+            target='_blank'>онлайн-консультант для сайта</a></div>
+    <noscript>
+        <div class="rc-web-nojs--nojs__wrapper">
+
+            <svg class="rc-web-nojs--nojs__icon" width="14" height="12" viewBox="0 0 14 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M3.99084 0.97683V8.46755C3.99084 8.75548 3.98848 8.99384 3.98376 9.18264C3.97904 9.36672 3.96724 9.5744 3.94836 9.80569C3.9342 10.0322 3.90823 10.2187 3.87047 10.365C3.83743 10.5066 3.79259 10.6863 3.73595 10.8468C3.67931 11.0072 3.60615 11.1347 3.51647 11.2291C3.43151 11.3235 3.32767 11.4132 3.20495 11.4981C2.78647 11.7717 2.05098 11.8875 1.57562 11.8875C1.00449 11.8875 0.567871 11.4792 0.015625 11.2291V10.0113C0.44987 10.1765 0.860795 10.9174 1.50603 10.7927C1.91692 10.7133 2.2869 10.3815 2.39074 10.188C2.4993 9.99449 2.55358 9.71601 2.55358 9.35256V0.97683H3.99084Z"
+                    fill="white" />
+                <path
+                    d="M13.1836 8.62362C13.1836 8.93042 13.1742 9.2089 13.1553 9.45906C13.1364 9.70451 13.101 9.93107 13.0491 10.1388C13.0019 10.3417 12.95 10.5211 12.8933 10.6768C12.8367 10.8326 12.7564 10.9718 12.6526 11.0946C12.5487 11.2126 12.4449 11.314 12.3411 11.399C12.2419 11.484 12.1098 11.5571 11.9446 11.6185C11.7841 11.6751 11.6283 11.72 11.4773 11.753C11.3263 11.7908 11.1375 11.8191 10.9109 11.838C10.6843 11.8568 10.4672 11.8687 10.2595 11.8734C10.0566 11.8828 9.8064 11.8875 9.50903 11.8875C8.94735 11.8875 8.47534 11.871 8.09302 11.838C7.71542 11.8049 7.39209 11.7341 7.12305 11.6256C6.85873 11.517 6.6534 11.4061 6.50708 11.2928C6.36076 11.1748 6.24512 10.9907 6.16016 10.7406C6.0752 10.4857 6.01856 10.2426 5.99024 10.0113C5.96664 9.78003 6.00912 9.41899 5.99024 8.99419H7.21953C7.23369 9.09803 7.26465 9.06494 7.27881 9.25374C7.30713 9.54638 7.33309 9.75407 7.35669 9.87679C7.38501 9.99479 7.43693 10.127 7.51245 10.2733C7.58797 10.4196 7.70598 10.5164 7.86646 10.5636C8.02694 10.606 8.23698 10.6438 8.49658 10.6768C8.75618 10.7099 9.10311 10.7264 9.53735 10.7264C9.89608 10.7264 10.1911 10.717 10.4224 10.6981C10.6536 10.6792 10.8566 10.6414 11.0312 10.5848C11.2059 10.5234 11.3381 10.455 11.4277 10.3795C11.5174 10.304 11.5882 10.1883 11.6401 10.0325C11.6968 9.87207 11.7322 9.70687 11.7463 9.53694C11.7605 9.36702 11.7652 9.14046 11.7605 8.85726C11.7558 8.23421 11.7204 7.80469 11.6543 7.56868C11.5929 7.32796 11.4584 7.18636 11.2507 7.14388L7.72486 6.52791C7.11125 6.42407 6.68408 6.19043 6.44336 5.82698C6.20264 5.46354 6.0752 4.87589 6.06104 4.06405C6.06104 3.6298 6.08228 3.25928 6.12476 2.95247C6.17196 2.64095 6.24984 2.36955 6.3584 2.13826C6.47168 1.90226 6.60856 1.71346 6.76905 1.57186C6.93425 1.43026 7.14901 1.31697 7.41333 1.23201C7.68238 1.14233 7.97502 1.08333 8.29126 1.05501C8.61222 1.02197 9.00399 1.00545 9.46655 1.00545C9.84416 1.00545 10.1675 1.01489 10.4365 1.03377C10.7103 1.04793 10.9746 1.07625 11.2295 1.11873C11.4891 1.16121 11.7039 1.22021 11.8738 1.29573C12.0437 1.37126 12.1995 1.47038 12.3411 1.5931C12.4874 1.7111 12.6007 1.85742 12.6809 2.03206C12.7611 2.20198 12.8225 2.40259 12.865 2.63387C12.9075 2.86515 12.9287 3.13183 12.9287 3.43392L11.6685 3.7242C11.6213 3.205 11.5906 2.90999 11.5764 2.83919C11.5198 2.59847 11.3853 2.43563 11.1729 2.35067C10.9368 2.25155 10.4436 2.20198 9.69311 2.20198C9.28247 2.20198 8.94263 2.21378 8.67358 2.23739C8.40926 2.26099 8.19214 2.29639 8.02222 2.34359C7.8523 2.38607 7.72486 2.45215 7.63989 2.54183C7.55965 2.63151 7.50537 2.72827 7.47705 2.83211C7.44873 2.93123 7.43457 3.06339 7.43457 3.2286V4.45345C7.43457 4.89713 7.62809 5.15202 8.01514 5.2181L10.5498 5.64998C10.7858 5.68774 10.9746 5.72078 11.1162 5.7491C11.2578 5.77742 11.4207 5.81518 11.6047 5.86239C11.7888 5.90959 11.9328 5.95915 12.0366 6.01107C12.1405 6.06299 12.2561 6.12907 12.3835 6.20931C12.511 6.28955 12.6101 6.37923 12.6809 6.47835C12.7517 6.57747 12.8225 6.69547 12.8933 6.83236C12.9688 6.96924 13.0231 7.125 13.0562 7.29964C13.0939 7.46956 13.1246 7.66545 13.1482 7.88729C13.1718 8.10441 13.1836 8.34985 13.1836 8.62362Z"
+                    fill="white" />
+            </svg>
+
+            <div class="rc-web-nojs--nojs__text">
+                Включите JavaScript в вашем браузере, без него сайт не работает.
+                <a class="rc-web-nojs--nojs__link" href="http://www.support.google.com/adsense/answer/12654"
+                    target="_blank"> Как включить JavaScript </a>
+            </div>
+        </div>
+    </noscript>
+    <div class="body">
+        
+
+
+
+
+
+
+    
+
+    <header>
+        <div class="b-header">
+            <div class="b-header__container">
+                    <a href="/">
+                        <img src="//storage.nic.ru/ru/images/svg/2.ru-center-logo.svg">
+                    </a>
+                <div class="b-header__follow">
+                    <a class="text-Main" href="/help/">
+                        Помощь
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+<div class="rc-web-base--main-container content-container rc-web-normalize--base">
+    <div class="b-content">
+
+
+
+                
+                <section>
+  <div class="b-search">
+    <form src="/help/index.php">
+      <input type="hidden" name="View" value="search" />
+      <input type="hidden" name="s" value="1" />
+
+      <div class="search-bar">
+        <input
+          maxlength="150"
+          name="q"
+          value=""
+          placeholder="Введите интересующий вопрос"
+          class="search-input"
+        />
+        <button class="primaryButton size-m">
+         <span class="search-text">Найти</span>
+          <img
+            src="/help/client/images/icons/search.svg"
+            class="search-icon"
+          />
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+   
+
+                
+                    <section>
+                        <div class="b-breadcrumbs">
+                            <ul><li><a href="https://www.nic.ru/help/" class="navigation">Помощь</a></li><li><a href="https://www.nic.ru/help/uslugi-501/" class="navigation">Услуги</a></li><li><a href="https://www.nic.ru/help/sajty-508/" class="navigation">Сайты</a></li><li><a href="https://www.nic.ru/help/poleznaya-informaciya-1345/" class="navigation">Полезная информация</a></li></ul>
+                        </div>
+                    </section>
+                
+
+                <!-- todo: вот отсюда пошел контент -->
+            <div class="b-article">
+
+    <div class="tdArticleTitle" id="top" style="overflow: hidden;">
+        
+
+        <div style="overflow: hidden;">
+            <h1 class="articleTitle">Что такое искусственный интеллект? Применение машинного обучения</h1>
+        </div>
+
+        <div style="clear: both"></div>
+    </div>
+
+    <div style="padding: 5px 0px 5px 25px; float: right;">
+        
+    </div>
+
+    <div class="textBlock rc-spacer-s" id="kbp_article_body">
+
+        
+
+        <p>Несколько лет назад развитие искусственного интеллекта (ИИ) вышло на совершенно новый уровень. Искать применение ИИ в своей работе стали компании практически во всех сферах деятельности. Расскажем простыми словами что такое искусственный интеллект и в каких отраслях его можно использовать.&nbsp;</p>
+
+<p><img alt="" height="305" src="/help/upload/image/unnamed%20(67).jpg" width="500" /></p>
+
+<h2>Что такое искусственный интеллект</h2>
+
+<p>Искусственный интеллект – это область информатики и инженерии, которая занимается созданием программ и систем, способных выполнять задачи, требующие человеческого мышления. Например, распознавать изображения, анализировать данные, диагностировать заболевания, принимать решения, делать прогнозы и другое.</p>
+
+<p>Термином "искусственный интеллект" обозначают программы и системы, которые могут обучать себя, анализировать информацию и предоставлять прогнозы и рекомендации на основании изученных данных. Такие программы и системы могут использовать различные методы обработки информации: нейронные сети, алгоритмы машинного обучения и генетические алгоритмы.</p>
+
+<p>История развития искусственного интеллекта началась еще в 1940-х годах, когда в научном сообществе появилась идея создания компьютеров, способных моделировать человеческое мышление. В 1950-60-х годах исследователи начали разработку машинного обучения, попробовали применить системы и методы, использующие логическое программирование для решения таких задач как игра в шахматы, распознавание речи. К концу 1960-х годов развитие искусственного интеллекта замедлилось из-за ограниченности вычислительной мощности компьютеров.</p>
+
+<p>В 1980-е годы исследователи начали использовать экспертные системы, которые позволяли программам решать задачи в определенной сфере деятельности на основе знаний, полученных от специалистов этой области. Также была развита технология машинного обучения, что дало возможность создавать программы, которые могут обучаться самостоятельно на больших объемах данных.</p>
+
+<p>В 1990-е годы искусственный интеллект стал активно применяться в таких областях как медицина, финансы, реклама. Развитие компьютеров и интернет-технологий стимулировало рост искусственного интеллекта и открыло новые возможности для его применения.</p>
+
+<h2>Что такое машинное обучение</h2>
+
+<p><img alt="" height="253" src="/help/upload/image/unnamed%20(68).jpg" width="500" /></p>
+
+<p>Машинное обучение – это раздел искусственного интеллекта, который отвечает за решение задач с помощью анализа и интерпретации данных, без программирования. Это метод обучения компьютеров позволяет программам обучаться на определенном наборе информации, запоминать ее и самостоятельно делать достоверные выводы. Компьютерная программа, которая использует машинное обучение, обрабатывает данные, извлекает из них общие закономерности и правила, которые используются для решения новых задач. Это позволяет создавать более гибкие и адаптивные системы, которые могут легко приспосабливаться к изменяющимся условиям и требованиям.</p>
+
+<p>Машинное обучение и искусственный интеллект используются вместе во многих приложениях, так как машинное обучение дает возможность компьютеру обучаться на различных данных и применять этот опыт в реальной жизни.</p>
+
+<p><img alt="" height="278" src="/help/upload/image/unnamed%20-%202023-06-22T151814_647.png" width="340" /></p>
+
+<p>Если вы заинтересованы в использовании машинного обучения в своей отрасли, попробуйте услугу <a href="https://www.nic.ru/catalog/hosting/hybrid-servers/">Аренда гибридного сервера</a>. Это поможет реализовать ваши проекты на высокопроизводительном оборудовании с высоким уровнем надежности и безопасности.&nbsp;</p>
+
+<h2>Как работает машинное обучение</h2>
+
+<p>В процессе машинного обучения обрабатываются большие объемы данных в компьютерных системах, для обучения используются алгоритмы и математические модели, чтобы выделить закономерности и паттерны.</p>
+
+<p><img alt="" height="333" src="/help/upload/image/unnamed%20(69).jpg" width="500" /></p>
+
+<p>Если рассматривать машинное обучение поэтапно, то оно состоит из следующих шагов:</p>
+
+<ol>
+	<li>Сбор и подготовка данных. Собранные данные необходимо тщательно подготовить: чтобы компьютер смог воспринимать их, информация должна быть предоставлена в удобном формате.</li>
+	<li>Выбор модели обработки данных. После того, как данные были подготовлены и проверены на наличие ошибок, выбирается определенная модель обработки и обобщения информации (линейная, дерево решений, случайный лес и т.д.), а также поиска закономерностей и проведения экспериментов.</li>
+	<li>Обучение модели. На данном этапе производится обучение на основании собранного набора данных. Специальные алгоритмы модели адаптируют новые данные и отрабатывают механизмы разбора незнакомых ситуаций.</li>
+	<li>Тестирование модели. После проведенного обучения наступает этап тестирования. Обученная модель машинного обучения тестируется на новых данных для оценки производительности и определения различных метрик точности.</li>
+	<li>Применение модели. Если тестирование прошло успешно, то модель готова для применения и может быть использована для решения реальных задач.</li>
+</ol>
+
+<p>Различные методы машинного обучения включают в себя виды обучения: с учителем, без учителя и обучения с подкреплением. Каждый вид имеет свои особенности и применяется в зависимости от задачи, которую необходимо решить.</p>
+
+<h2>Виды машинного обучения</h2>
+
+<ol>
+	<li>Обучение с учителем.</li>
+</ol>
+
+<p>Обучение происходит на основе размеченных данных, где каждый пример имеет правильный ответ. Этот тип обучения используется для задач классификации объектов на основе определенных характеристик, предсказания численных значений и прогнозирования будущих событий, например, определение, является ли электронное письмо спамом или нет, предсказание цены на недвижимость.</p>
+
+<ol start="2">
+	<li>Обучение без учителя.</li>
+</ol>
+
+<p>Компьютер обучается на наборе данных, не содержащих правильных ответов. Он ищет закономерности, не имея конкретного ответа на задачу. Компьютер должен самостоятельно выявлять закономерности и структуру. Этот тип обучения используется для задач кластеризации и ассоциативного анализа, например, группировка пользователей по их интересам, выделение тематических кластеров в текстовых блоках.</p>
+
+<ol start="3">
+	<li>Обучение с подкреплением.</li>
+</ol>
+
+<p>Компьютер обучается на основе опыта, полученного в результате взаимодействия с окружающей средой. Он получает поощрение или штраф за каждое действие, которое выполняет, его цель – максимизировать награду. Этот тип обучения используется для задач управления и принятия решений, например, обучение робота ходьбе,&nbsp; компьютер играть в шахматы.</p>
+
+<ol start="4">
+	<li>Можно выделить еще один вид машинного обучения – глубокое обучение ( Deep learning). Это более сложный процесс, о нем рассказываем отдельно далее.</li>
+</ol>
+
+<p>Выбор подходящего типа машинного обучения зависит от конкретной задачи и наличия доступных данных.</p>
+
+<h2>Где применяется машинное обучение</h2>
+
+<p>Машинное обучение используется в различных сферах деятельности, где требуется обработка больших объемов данных и выполнение сложных задач. Рассмотрим, в каких отраслях уже применяется или может быть использовано машинное обучение:</p>
+
+<ul>
+	<li>Медицина: анализ медицинских данных, диагностика заболеваний, изучение генома и прогнозирование эпидемий.</li>
+	<li>Банковское дело и финансы: обработка и анализ банковской информации, решение задач кредитного скоринга, оценка рисков, ведение торговли на финансовых рынках.</li>
+	<li>Торговля: улучшение качества работы онлайн-магазинов, анализ поведения потребителей, определение лучших цен, создание персонализированных рекомендаций.</li>
+	<li>Автомобильная промышленность: усовершенствование автономных транспортных средств, диагностирование и управление производственными процессами, повышение качества и надежности автомобилей.</li>
+	<li>Обработка медиа-данных: распознавание и классификации изображений, аудиофайлов и видеофайлов.</li>
+	<li>Научные исследования: выполнение масштабных вычислений, проведение более точных исследований.</li>
+	<li>Безопасность: распознавание лиц, охрана территорий и домов, анализ данных криминальной статистики, создание системы мониторинга.</li>
+	<li>Обработка человеческой речи (Natural Language Processing, NLP): анализ и понимания человеческого языка позволяет создавать голосовых помощников, системы автоматического перевода, системы анализа текстов и другое.</li>
+	<li>Транспорт: создание автономных транспортных средств, систем управления транспортным потоком, оптимизация маршрутов.</li>
+</ul>
+
+<p>Это только некоторая часть примеров отраслей, где используется машинное обучение, с каждым годом количество областей только увеличивается.</p>
+
+<h2>Глубокое обучение (Deep learning)</h2>
+
+<p>Глубокое обучение – это вид обучения, использующий нейронные сети с большим количеством слоев для обработки данных. Глубокое обучение позволяет автоматически извлекать признаки из данных и использовать эти признаки для классификации, регрессии и других задач.</p>
+
+<p><img alt="" height="333" src="/help/upload/image/unnamed%20(70).jpg" width="500" /></p>
+
+<p>Нейронные сети, используемые в глубоком обучении, могут содержать до нескольких тысяч слоев, что позволяет изучать сложные структуры данных. Каждый слой нейронов в нейронной сети вычисляет свою функцию, преобразуя входные данные для передачи на следующий слой. Глубокое обучение позволяет создавать модели, которые могут быстро распознавать объекты на изображениях, работать с текстом и аудиофайлами, а также прогнозировать будущие события.</p>
+
+<p>Основным преимуществом глубокого обучения является способность автоматически извлекать признаки из данных, что позволяет создавать более точные модели. Кроме того, глубокое обучение позволяет работать с большими объемами данных и обучать модели на многих ядрах процессора или графических процессорах (GPU), что ускоряет процесс обучения.</p>
+
+<p>Глубокое обучение применяется в широком спектре областей, например, компьютерное зрение, обработку человеческой речи, рекомендательные системы, управление производственными процессами и другое.&nbsp;</p>
+
+<p>Чрезвычайно быстрый рост в области глубокого обучения происходит за счет бурного развития процессорных технологий и возможностей облачных сервисов, что позволяет создавать более сложные и эффективные модели глубокого обучения.</p>
+
+<h2>Заключение</h2>
+
+<p>Машинное обучение занимает центральное место среди новых технологических продуктов, которые могут значительно упростить работу и усовершенствовать существующие индустрии. Однако, искусственный интеллект требует дальнейшего развития, чтобы сделать его еще более эффективным и универсальным.&nbsp;</p>
+
+
+        
+
+    </div>
+
+	<div>
+		
+	</div>
+
+    <div style="clear: both;"></div>
+
+</div><a id="anchor_entry_category"></a>
+<!--<table class="sTable tableCp1 tableCs1">
+<tr class="tdSubTitle">
+    <td colspan="2" class="tdSubTitle"><b>Другие статьи в этой категории</b></td>
+</tr>
+<tr><td colspan="2" style="padding: 3px;"></td></tr>
+
+
+<tr>
+    <td style="padding-left: 2px;"><img src="https://www.nic.ru/help/client/images/icons/bullet.svg" alt="b" style="vertical-align: middle;" /></td>
+    <td style="width: 100%;padding-left: 4px;">
+        <a href="https://www.nic.ru/help/kak-sozdat6-pol6zovatelya-na-windows-v-linux-i-ubuntu-poshagovaya-instrukciya_11258.html" class="articleLinkOther">Как создать пользователя на Windows в Linux и Ubuntu: пошаговая инструкция</a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding-left: 2px;"><img src="https://www.nic.ru/help/client/images/icons/bullet.svg" alt="b" style="vertical-align: middle;" /></td>
+    <td style="width: 100%;padding-left: 4px;">
+        <a href="https://www.nic.ru/help/kak-ustanovit6-tensorflow_11738.html" class="articleLinkOther">Как установить Tensorflow</a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding-left: 2px;"><img src="https://www.nic.ru/help/client/images/icons/bullet.svg" alt="b" style="vertical-align: middle;" /></td>
+    <td style="width: 100%;padding-left: 4px;">
+        <a href="https://www.nic.ru/help/kak-ochistit6-kesh-brauzera-mozilla-firefox-poshagovaya-instrukciya_11617.html" class="articleLinkOther">Как очистить кэш браузера Mozilla Firefox: пошаговая инструкция</a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding-left: 2px;"><img src="https://www.nic.ru/help/client/images/icons/bullet.svg" alt="b" style="vertical-align: middle;" /></td>
+    <td style="width: 100%;padding-left: 4px;">
+        <a href="https://www.nic.ru/help/kak-ustanovit6-homebrew-na-mac_11748.html" class="articleLinkOther">Как установить Homebrew на Mac</a>
+    </td>
+</tr>
+
+<tr>
+    <td style="padding-left: 2px;"><img src="https://www.nic.ru/help/client/images/icons/bullet.svg" alt="b" style="vertical-align: middle;" /></td>
+    <td style="width: 100%;padding-left: 4px;">
+        <a href="https://www.nic.ru/help/kak-uznat6-ip-adres-komp6yutera_11117.html" class="articleLinkOther">Как узнать IP-адрес компьютера</a>
+    </td>
+</tr>
+
+
+<tr style="vertical-align: top;">
+    <td></td>
+    <td style="padding-top: 7px;"><a href="https://www.nic.ru/help/poleznaya-informaciya-1345/" class="smallerText">&raquo; еще</a></td>
+</tr>
+
+
+</table>
+<br />-->
+
+        <section id="feedback-button">
+            <div class="b-feedback rc-spacer-m">
+                <div class="b-feedback__container">
+
+                    <div class="b-feedback__container__box">
+                        <h2 class="text-titleH2 bold" style="text-align: center;">
+                            Всё ещё остались вопросы?
+                        </h2>
+                        <div style="margin-top: 16px">
+                            <button class="primaryButton size-m" href="javascript:;" data-toggle-show="#feedback-form" data-toggle-hide="#feedback-button">
+                                Написать в службу поддержки
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="display: none;" id="feedback-form">
+
+            <div class="b-feedback has-border">
+                <div class="b-feedback__container">
+                    <div class="b-feedback__close">
+                        <a href="javascript:;" data-toggle-show="#feedback-button" data-toggle-hide="#feedback-form">
+                            <span class="icon-rc-close"></span></a>
+                    </div>
+
+                    <iframe
+                            id="rc-feedback-form"
+                            src="/support/create_ticket"
+                            frameborder="no"
+                            scrolling="no"
+                            width="100%"
+                            height="660px"
+                            sandbox="allow-same-origin allow-scripts allow-top-navigation"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section style="display: none;" id="feedback-complete">
+            <div class="b-feedback has-border">
+                <div class="b-feedback__container">
+                    <div class="b-feedback__close">
+                        <a href="javascript:;" data-toggle-show="#feedback-button" data-toggle-hide="#feedback-complete">
+                            <span class="icon-rc-close"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="go-to-top" id="go-to-top" onclick="topFunction()">
+            <div class="go-to-top__arrow"></div>
+        </div>
+    </div>
+    <script>
+        const rcFeedbackForm = document.getElementById("rc-feedback-form");
+    
+        rcFeedbackForm.onload = function () {
+          function getDynamicHeight() {
+            const width = window.innerWidth;
+    
+            switch (true) {
+              case width <= 400:
+                return 800;
+              case width <= 520:
+                return 758;
+              case width > 520:
+                return 700;
+              default:
+                return 660;
+            }
+          }
+    
+          function resizeContent() {
+            const iframeHeight = Math.max(
+              getDynamicHeight(),
+              rcFeedbackForm.contentWindow.document.body.scrollHeight
+            );
+            rcFeedbackForm.style.height = iframeHeight + "px";
+          }
+    
+          resizeContent();
+    
+          const observer = new MutationObserver(resizeContent);
+          observer.observe(rcFeedbackForm.contentWindow.document.body, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+          });
+    
+          window.addEventListener("resize", resizeContent);
+        };
+    </script>
+</div>
+
+        
+
+	<script type="text/javascript">
+var xajaxRequestUri="https://www.nic.ru/help/entry/11605/?ajax=1&utm_source=google.com&utm_medium=organic&utm_campaign=google.com&utm_referrer=google.com";
+var xajaxDebug=false;
+var xajaxStatusMessages=false;
+var xajaxWaitCursor=true;
+var xajaxDefinedGet=0;
+var xajaxDefinedPost=1;
+var xajaxLoaded=false;
+function xajax_getChildCategories(){return xajax.call("getChildCategories", arguments, 1);}
+	</script>
+	<script type="text/javascript" src="https://www.nic.ru/help/client/jscript/xajax_js/xajax.js"></script>
+	<script type="text/javascript">
+window.setTimeout(function () { if (!xajaxLoaded) { alert('Error: the xajax Javascript file could not be included. Perhaps the URL is incorrect?\nURL: https://www.nic.ru/help/client/jscript/xajax_js/xajax.js'); } }, 6000);
+	</script>
+<script src="https://www.nic.ru/help/client/jscript/xajax_js/spiner.js" type="text/javascript"></script>
+
+
+
+
+
+        <footer class="b-footer">
+          <div class="topLine">
+            <div class="topLine__container">
+              <a href="/about/contact_ncc.html" datatype="native" rel="nofollow" style="text-decoration: none">
+                <button class="primaryButton size-s topLine__help-button" type="button"> Служба поддержки </button>
+              </a>
+              <ul class="topLine__phone">
+                <li>
+                  <a href="tel:+74950091333" style="text-decoration: none">
+                    <span class="text-Large color-primaryWhite">+7 495 009-13-33</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+74959944601" style="text-decoration: none">
+                    <span class="text-Large color-primaryWhite">+7 495 994-46-01</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu">
+            <div class="menu__container">
+              <nav class="menu__nav">
+                <div class="column__container">
+                  <h2 class="text-Main color-tertiaryMain">Руцентр</h2>
+                  <ul class="column__list">
+                    <li>
+                      <a href="/about/" style="text-decoration: none">
+                        <span class="text-Main color-primaryWhite column__hover">О компании</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/about/#offices" style="text-decoration: none">
+                        <span class="text-Main color-primaryWhite column__hover">Контакты</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="column__container">
+                  <h2 class="text-Main color-tertiaryMain">Социальные сети</h2>
+                  <ul class="column__list">
+                    <li>
+                      <a href="https://vk.com/rucenter" target="_blank" style="text-decoration: none">
+                        <span class="text-Main color-primaryWhite column__hover">Вконтакте</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.vk.com/video/@rucenter/" target="_blank" style="text-decoration: none">
+                        <span class="text-Main color-primaryWhite column__hover">VK Видео</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://t.me/rucenter/" target="_blank" style="text-decoration: none">
+                        <span class="text-Main color-primaryWhite column__hover">Telegram</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="column__container">
+                  <h2 class="text-Main color-tertiaryMain">Полезное</h2>
+                  <ul class="column__list">
+                    <li>
+                      <a href="https://www.rbc.ru/" target="_blank" style="text-decoration: none">
+                        <span class="text-Main color-primaryWhite column__hover">РБК: последние новости России и мира</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://companies.rbc.ru/" target="_blank" style="text-decoration: none">
+                        <span class="text-Main color-primaryWhite column__hover">Каталог компаний РФ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.rbc.ru/quote/" target="_blank" style="text-decoration: none">
+                        <span class="text-Main color-primaryWhite column__hover">РБК: котировки акций</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="iconPanel__panel">
+            <div class="iconPanel__container">
+              <ul class="partnersSection__partners">
+                <li>
+                  <a href="https://www.icann.org/ru/" target="_blank" style="text-decoration: none; height: 30px; display: block">
+                    <img src="/help/client/images/icons/companies/icann.svg" class="b-footer__default-icon" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://cctld.ru/ru/" target="_blank" style="text-decoration: none; height: 30px; display: block">
+                    <img src="/help/client/images/icons/companies/cctld.svg" class="b-footer__default-icon" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://digital.gov.ru/ru/" target="_blank" style="text-decoration: none; height: 30px; display: block">
+                    <img src="/help/client/images/icons/companies/digital-gov.svg" class="b-footer__default-icon" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://faitid.org/ru/" target="_blank" style="text-decoration: none; height: 30px; display: block">
+                    <img src="/help/client/images/icons/companies/faitid.svg" class="b-footer__default-icon" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://raec.ru" target="_blank" style="text-decoration: none; height: 30px; display: block">
+                    <img src="/help/client/images/icons/companies/raec.svg" class="b-footer__default-icon" />
+                  </a>
+                </li>
+              </ul>
+              <div class="paymentSection__payment">
+                <ul class="paymentSection__list">
+                  <li>
+                    <a href="/help/oplata-s-pomosh6yu-bankovskih-kart-visa-mastercard-mir_707.html" style="
+                                text-decoration: none;
+                                height: 30px;
+                                display: block;
+                              ">
+                      <img src="/help/client/images/icons/payments-systems/visa.svg" class="b-footer__default-icon" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/help/oplata-cherez-sistemu-bystryh-platezhej-sbp_9070.html" style="
+                                text-decoration: none;
+                                height: 30px;
+                                display: block;
+                              ">
+                      <img src="/help/client/images/icons/payments-systems/sbp.svg" class="b-footer__default-icon" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/help/oplata-cherez-terminaly-sberbanka_725.html" style="
+                                text-decoration: none;
+                                height: 30px;
+                                display: block;
+                              ">
+                      <img src="/help/client/images/icons/payments-systems/sberbank.svg" class="b-footer__default-icon" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/help/oplata-cherez-sistemu-yumoney_711.html" style="
+                                text-decoration: none;
+                                height: 30px;
+                                display: block;
+                              ">
+                      <img src="/help/client/images/icons/payments-systems/iomoney.svg" class="b-footer__default-icon" />
+                    </a>
+                  </li>
+                </ul>
+                <a href="/help/sposoby-oplaty-uslug_684.html" style="text-decoration: none">
+                  <button class="primaryButton size-s topLine__help-button" type="button"> Все способы оплаты </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="businessPanel__panel">
+            <div class="businessPanel__container">
+              <nav>
+                <ul class="businessPanel__list">
+                  <a href="/help/usloviya-ispol6zovaniya-promokodov-ru-center_6027.html" style="text-decoration: none">
+                    <li>
+                      <span class="text-Main color-secondaryLight businessPanel__text businessPanel__hover">Об использовании промокодов</span>
+                    </li>
+                  </a>
+                  <a href="/help/rassylki-ot-moshennikov_6180.html" style="text-decoration: none">
+                    <li>
+                      <span class="text-Main color-secondaryLight businessPanel__text businessPanel__hover">Остерегайтесь мошенников</span>
+                    </li>
+                  </a>
+                  <a href="/help/inye-zhaloby-po-domenam_6167.html" style="text-decoration: none">
+                    <li>
+                      <span class="text-Main color-secondaryLight businessPanel__text businessPanel__hover">Сообщить о нарушениях</span>
+                    </li>
+                  </a>
+                  <a href="/help/politika-v-otnoshenii-obrabotki-personal6nyh-dannyh-i-realizacii-trebovanij-k-zashite-personal6nyh-d_3402.html" style="text-decoration: none">
+                    <li>
+                      <span class="text-Main color-secondaryLight businessPanel__text businessPanel__hover">Обработка персональных данных</span>
+                    </li>
+                  </a>
+                  <a href="/help/pravila-primeneniya-rekomendatel6nyh-tehnologij_11767.html" style="text-decoration: none">
+                    <li>
+                      <span class="text-Main color-secondaryLight businessPanel__text businessPanel__hover">Правила применения рекомендательных технологий</span>
+                    </li>
+                  </a>
+                </ul>
+              </nav>
+              <span class="text-Main color-tertiaryMain businessPanel__text">© АО «РСИЦ» Руцентр</span>
+            </div>
+          </div>
+        </footer>
+    </div>
+
+    <div id="overall" class="overall"></div>
+    <div id="underfixed" clas="underfixed"></div>
+    <div id="webchat"></div>
+
+    <script>
+        var $el = document.querySelector('div.rc-web-footer--copyright');
+        var currentYear = new Date().getFullYear();
+        var text = '© АО «РСИЦ» (RU-CENTER), ' + currentYear;
+        $el.innerText = text;
+    </script>
+    <script type="text/javascript" src="/help/html/js/lib/console.js"></script>
+
+    <script type="text/javascript">
+        requirejs.config({
+            baseUrl: '/help/html/js/',
+            urlArgs: '' + (new Date()).getTime(),
+            paths: {
+                jquery: 'lib/jquery-3.2.1',
+                jqueryUi: 'lib/jquery-ui-1.12.1.custom/jquery-ui',
+
+                bootstrapTransition: 'lib/bootstrap/transition',
+                bootstrapCollapse: 'lib/bootstrap/collapse',
+
+                jqueryCustomSelect: '../front/components/jquery.custom.select/jquery.custom.select',
+
+                handlebars: 'lib/handlebars-v4.0.11',
+                bloodhound: 'lib/bloodhound',
+                typeahead: 'lib/typeahead',
+
+                app: 'app/app'
+            },
+            shim: {
+                bootstrapTransition: {
+                    deps: ['jquery']
+                },
+
+                bootstrapCollapse: {
+                    deps: ['jquery']
+                },
+
+                jqueryCustomSelect: {
+                    deps: ['jquery']
+                }
+            }
+        });
+
+        requirejs(['jquery', 'app']);
+    </script>
+    <script type="text/javascript" src="/help/html/js/lib/go-to-top.js"></script>
+
+    <!-- Яндекс метрика отключена в рамках RCWEB-10161 -->
+    <!-- RCWEB-10115 -->
+    <!-- <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(26218776, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            triggerEvent: true,
+            ecommerce: "yaEcom"
+        });
+    </script> -->
+    <!-- <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/26218776" style="position:absolute; left:-9999px;" alt="" />
+        </div>
+    </noscript> -->
+    <script id="advcakeAsync">
+        (function (a) {
+            var b = a.createElement("script");
+            b.async = 1;
+            b.src = "//code.gbzu92.ru/";
+            a=a.a = a.getElementById("advcakeAsync");
+            a.parentNode.insertBefore(b,a);
+        })(document);
+    </script>
+    <!-- facebookPixel отключен в рамках RCWEB-10122 -->
+    <!-- <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '724655501360594');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <div>
+            <img height="1" width="1" style="display:none;"
+                src="https://www.facebook.com/tr?id=724655501360594&ev=PageView&noscript=1" alt="" />
+        </div>
+    </noscript> -->
+    <script>
+        function setCookie(name, value, options) {
+            options = options || {};
+
+            var expires = options.expires;
+
+            if (typeof expires == "number" && expires) {
+                var d = new Date();
+                d.setTime(d.getTime() + expires * 1000);
+                expires = options.expires = d;
+            }
+            if (expires && expires.toUTCString) {
+                options.expires = expires.toUTCString();
+            }
+
+            //value = encodeURIComponent(value);
+
+            var updatedCookie = name + "=" + value;
+
+            for (var propName in options) {
+                updatedCookie += "; " + propName;
+                var propValue = options[propName];
+                if (propValue !== true) {
+                    updatedCookie += "=" + propValue;
+                }
+            }
+
+            document.cookie = updatedCookie;
+        }
+
+        function getCookie(name) {
+            var matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([.$?*|{}()\[\]\\\/+^])/g, '\\$1') + "=([^;]*)"
+            ));
+
+            return matches ? matches[1] : undefined;
+        }
+
+        function deleteCookie(name) {
+            setCookie(name, "", {
+                expires: -1
+            })
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var urlParam = function (name) {
+                var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+                if (results == null) {
+                    return null;
+                }
+                else {
+                    return results[1] || 0;
+                }
+            }
+
+            /*Проверяем есть ли utm-метка*/
+            var utm_source = urlParam('utm_source');
+            var utm_medium = urlParam('utm_medium');
+            if (utm_source) {
+                if (utm_medium != "self" && utm_source != "trg_wlc") {
+                    var source = utm_source;
+                    var trackId = getTrackId();
+                    var landingUrl = getLandingUrl();
+
+                    setNewCookie(source, trackId, landingUrl);
+                    setDimensions(source, trackId, landingUrl);
+                }
+            } else {
+                /*Ищем в куках параметры*/
+                var source = getCookie('nic_source');
+                var trackId = getCookie('nic_trackid');
+                var landingUrl = getCookie('nic_landingurl');
+
+                if (source && trackId && landingUrl) {
+                    setDimensions(source, trackId, landingUrl);
+                } else {
+                    clearDimensions("", "", "");
+                }
+            }
+
+            function setNewCookie(source, trackId, landingUrl) {
+                deleteCookie('nic_source');
+                deleteCookie('nic_trackid');
+                deleteCookie('nic_landingurl');
+
+                setCookie('nic_source', source, { expires: 3600 * 24 * 30, path: "/", domain: ".nic.ru" });
+                setCookie('nic_trackid', trackId, { expires: 3600 * 24 * 30, path: "/", domain: ".nic.ru" });
+                setCookie('nic_landingurl', landingUrl, { expires: 3600 * 24 * 30, path: "/", domain: ".nic.ru" });
+            }
+
+            function setDimensions(source, trackId, landingUrl) {
+                // RCWEB-10161
+                // ga('set', 'dimension6', source);
+                // ga('set', 'dimension7', trackId);
+                // ga('set', 'dimension8', landingUrl);
+            }
+
+            function clearDimensions(source, trackId, landingUrl) {
+                // RCWEB-10161
+                // ga('set', 'dimension6', source);
+                // ga('set', 'dimension7', trackId);
+                // ga('set', 'dimension8', landingUrl);
+            }
+
+            function getTrackId() {
+                var uuid = getCookie('uuid') || setUUID();
+                var timestamp = new Date().getTime();
+
+                return uuid + timestamp;
+            }
+
+            function getLandingUrl() {
+                return location.href;
+            }
+
+            function setUUID() {
+                var pattern = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
+
+                var uuid = pattern.replace(/[xy]/g, function (c) {
+                    var r = (Math.random() * 16) | 0;
+                    return (c === 'x' ? r : ((r & 0x3) | 0x8)).toString(16);
+                });
+
+                setCookie('uuid', uuid, { expires: 3600 * 24 * 30, path: "/", domain: ".nic.ru" });
+                return uuid;
+            }
+        });
+    </script>
+    <script src="https://yastatic.net/pcode/adfox/loader.js" crossOrigin="anonymous" defer></script>
+</body>
+
+</html>
