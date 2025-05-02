@@ -9,7 +9,7 @@ import seaborn as sns
 import calendar
 import configparser
 import unittest
-from web import VKUniversityMentionsCollector
+from vk import VKUniversityMentionsCollector
 import json
 from pathlib import Path
 
